@@ -1,8 +1,9 @@
 window.onload = function () {
     numberAr = [];
     let form = document.getElementById("form");
-    let output = document.getElementById("output");
+    let output = document.querySelector("p");
     form.addEventListener("submit", submitFunction);
+    //business logic
     function submitFunction(event) {
         event.preventDefault();
         let inputNumber = document.getElementById("input").value;
@@ -14,6 +15,7 @@ window.onload = function () {
         }
 
     }
+    //ui Logic
     function ui(test) {
         output.innerHTML = test;
     }
