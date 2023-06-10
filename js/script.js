@@ -26,22 +26,16 @@ window.onload = function () {
 window.onload = function () {
     numberAr = [];
     let form = document.getElementById("form");
-    let output = document.getElementById("output").innerText;
+    let output = document.getElementById("output");
     form.addEventListener("submit", submitFunction);
     function submitFunction(event) {
         event.preventDefault();
         let inputNumber = document.getElementById("input").value;
-        let savedNumber = inputNumber;
-        for (index = 0; index < inputNumber; index++) {
-            savedNumber = numberAr.push(index);
-            stringNumber = savedNumber.toString();
-            if (stringNumber.includes("1")) {
-                replaceNumber = stringNumber.replace("1","hello")
-                console.log(replaceNumber);
-            }
-            output = replaceNumber;
+        for (let index = 0; index <= inputNumber; index++) {
+            numberAr.push(index);
+            output.innerHTML = numberAr;
+            console.log(output.innerHTML);
+        }
+                
         }
     }
-
-
-}
