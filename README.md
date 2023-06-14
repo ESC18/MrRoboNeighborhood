@@ -44,13 +44,9 @@ Expected Output: 1 - 2 - 3 - 4 - 5.
 
 Test: Should turn array into string and then turn 1's into 'boop', 2's into 'beep', and 3's into 'Welcome to the Neighborhood'.
 Code:             
-        test = test.toString().replaceAll("1", "Beep").replaceAll("2", "Boop").replaceAll("3", "Welcome to the neighborhood");
+         test = test.toString().replaceAll("1", "Beep").replaceAll("2", "Boop").replaceAll("3", "Welcome to the neighborhood");
 Expected Output: 0 - Beep - Boop - Welcome to the neighborhood - 4 - 5.
 
-Describe: ui()
 
-Test: Should display text stating the results to the user.
-Code: output.innerHTML = test;
-Expected Output: 0 - Beep - Boop - Welcome to the neighborhood - 4 - 5.
 
 
