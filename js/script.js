@@ -1,17 +1,22 @@
-let arr = [];
+/*function display(arr) {
+    let output = document.getElementById("output").innerHTML;
+    console.log(output);
 
-
-function arraySave(savedValue) {
-    arr.push(savedValue);
 }
 
 
+WORK IN PROGRESS (WIP)
 
 
 
 
+let arr = [];
 
-
+function arraySave(savedValue) {
+    arr.push(savedValue);
+    display();
+}
+*/
 function tester (index) {
     if (index.toString().includes("1") === true) {
         index = "Boop";
