@@ -5,10 +5,10 @@ function arraySave(savedValue) {
     arr.push(savedValue);
     display(arr);
 }
-//
+
 function tester (index) {
     if (index.toString().includes("3") === true) {
-        index = " Boop ";
+        index = " Won't you be my Neighbor? "
         savedValue = index;
         arraySave(savedValue);
     } else if (index.toString().includes("2") === true) {
@@ -16,7 +16,7 @@ function tester (index) {
         savedValue = index;
         arraySave(savedValue);
     } else if (index.toString().includes("1") === true) {
-        index = " Won't you be my Neighbor? "
+        index = " Boop ";
         savedValue = index;
         arraySave(savedValue);
     } else {
@@ -24,25 +24,25 @@ function tester (index) {
         arraySave(savedValue);
     }
 }
-//
-function counter (event, value) {
+
+
+
+//UI Logic
+function counter (event) {
+    arr = [];
     event.preventDefault();
+    let value = document.getElementById("input").value; 
     for (let index = 0; index <= value; index++) {
         tester(index);
     }
 }
 
-
-
-//UI Logic
 window.onload = function () {
     let form = document.getElementById("form");
-    let value = document.getElementById("input").value;
-    form.addEventListener("submit", (event) => counter(event, value));
+    form.addEventListener("submit",counter);
 }
 
 function display(arr) {
-    arr = [];
     let output = document.querySelector("p");
     output.innerHTML = arr.toString();
 }

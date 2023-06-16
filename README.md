@@ -17,7 +17,6 @@ This web application was designed to simulate the output of a neighbor that is a
 3. Open index.html.
 
 ## Known Bugs:
-* The JS will not delete the entirety of the number if it has more than a single digit; resulting in there being results that show as "beep4" or "boop4" for example.
 * Is not completely responsive - may suffer when dealing with smaller screen sizes. For best results use a screen that measures 1920x1080px.
 
 ## Licensing:
@@ -26,27 +25,29 @@ Copyright (c) 2023 _Elijah Shawn Cartwright_
 
 ## Tests:
 
-Describe: submitFunction()
 
-Test: Should be able to grab input from user.
-Code: let inputNumber = document.getElementById("input").value;
-Expected Output: 5 (or whatever user inputs - I used the int 5 for my tests)
+Describe: arraySave();
 
-Test: Should subtract from the user-inputted number to produce an array.
-Code: 
-        for (let index = 0; index <= inputNumber; index++) {
-        numberAr.push(index); }
-Expected Output: 1,2,3,4,5 (As stated before - I used the int 5 for my tests).
-
-Test: Should seperate results with '-'.
-Code: test = numberAr.join(' - ');
-Expected Output: 1 - 2 - 3 - 4 - 5.
-
-Test: Should turn array into string and then turn 1's into 'boop', 2's into 'beep', and 3's into 'Welcome to the Neighborhood'.
-Code:             
-         test = test.toString().replaceAll("1", "Beep").replaceAll("2", "Boop").replaceAll("3", "Welcome to the neighborhood");
-Expected Output: 0 - Beep - Boop - Welcome to the neighborhood - 4 - 5.
+Test: Takes value outputted from tester() and pushes it to an array so as to save it to a long list of values as a string. For tests we. (This tests lines 4-6).
+Code (Inserted on line 7): console.log(arr);
+Expected output: "0, Boop, Beep, Won't you be my Neighbor?, 4, 5."
 
 
+Describe: tester();
 
+Test: Code takes value from counter and determines if it contains a 3 and replaces it with "Won't you be my neighbor?" (This tests lines 10-13).
+Code (inserted on line 14): console.log(savedValue) 
+Expected Output: " won't you be my Neighbor?"
+
+Test: Code takes value from counter and determines if it contains a 2 and replaces it with " Beep". (This tests lines 14-17).
+Code (inserted on line 18): console.log(savedValue)
+Expected Output: " Beep"
+
+Test: Code takes value from counter and determines if it contains a 1 and reokaces it with " Boop". (This tests lines 18-21).
+Code (Inserted on line 22): console.log(savedValue)
+Expected Output: " Boop" 
+
+Test: Code takes value from counter and if it doesn't contain a 1,2, or 3 in said number, then it returns said number as is. For the tests we used the integer 5. (This tests lines 22-24).
+Code (Inserted on line 25): console.log(savedValue);
+Expected Output: 5.
 
