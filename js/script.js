@@ -9,18 +9,18 @@ function arraySave(savedValue) {
 function tester (index) {
     if (index.toString().includes("3") === true) {
         index = " Won't you be my Neighbor? "
-        savedValue = index;
+        let savedValue = index;
         arraySave(savedValue);
     } else if (index.toString().includes("2") === true) {
         index = " Beep";
-        savedValue = index;
+        let savedValue = index;
         arraySave(savedValue);
     } else if (index.toString().includes("1") === true) {
         index = " Boop ";
-        savedValue = index;
+        let savedValue = index;
         arraySave(savedValue);
     } else {
-        savedValue = index;
+        let savedValue = index;
         arraySave(savedValue);
     }
 }
